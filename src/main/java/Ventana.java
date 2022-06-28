@@ -68,17 +68,33 @@ public class Ventana extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == boton){
             Ventana v2 = new Ventana();
+            v2.setTitle("Agregar Nuevo estudiante");
             v2.setSize(500,400);
             v2.setVisible(true);
             v2.setLayout(null);
             v2.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             JLabel etiqueta = new JLabel();
-            etiqueta.setText("Usuario");
+            JLabel etiqueta1 = new JLabel();
+            JLabel etiqueta2 = new JLabel();
+            etiqueta.setText("Rut");
+            etiqueta1.setText("Nombre");
+            etiqueta2.setText("Email");
             etiqueta.setBounds(10,100,100,40);
+            etiqueta1.setBounds(10,120,100,40);
+            etiqueta2.setBounds(10,140,100,40);
             v2.add(etiqueta);
+            v2.add(etiqueta1);
+            v2.add(etiqueta2);
             JTextField cajon= new JTextField();
+            JTextField cajon1= new JTextField();
+            JTextField cajon2= new JTextField();
             cajon.setBounds(100,110,100,20);
+            cajon1.setBounds(100,130,100,20);
+            cajon2.setBounds(100,150,100,20);
             v2.add(cajon);
+            v2.add(cajon1);
+            v2.add(cajon2);
+
         }
     }
 }
